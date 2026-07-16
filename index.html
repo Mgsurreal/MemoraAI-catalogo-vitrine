@@ -17,6 +17,7 @@
     main{max-width:1120px;margin:auto;padding:42px 16px 72px}section+section{margin-top:64px}.section-title{display:flex;gap:14px;align-items:flex-start;margin:0 4px 22px}.section-title>span{font-size:30px}.section-title h2{font-family:Georgia,serif;font-size:30px;margin:0 0 6px}.section-title p{color:var(--muted);margin:0;line-height:1.5}
     .grid{display:grid;grid-template-columns:1fr;gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 35px #33270f0d}.card img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:#eee8dc}.copy{padding:19px 18px 21px}.copy small{color:var(--green);font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}.copy h3{font-family:Georgia,serif;font-size:25px;line-height:1.08;margin:9px 0}.copy p{color:var(--muted);line-height:1.55;margin:0}.copy span{display:none}
     footer{padding:34px 20px 48px;text-align:center;border-top:1px solid var(--line);color:var(--muted);line-height:1.6}footer strong{display:block;color:var(--ink);font-size:20px;margin-bottom:8px}
+    .card-media{position:relative}.card-media img{display:block}.card-whatsapp{position:absolute;right:12px;bottom:12px;padding:10px 13px;border-radius:999px;background:#25d366;color:#fff;font-size:12px;font-weight:800;text-decoration:none;box-shadow:0 6px 20px #0c3d2270;transition:transform .2s,background .2s}.card-whatsapp:hover{transform:translateY(-2px);background:#1fbd5a}.card-whatsapp:focus-visible{outline:3px solid #fff;outline-offset:2px}
     @media(min-width:620px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:68px 34px 48px}main{padding-inline:28px}}
     @media(min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card img{aspect-ratio:4/5}.copy{min-height:192px}}
   </style>
@@ -274,5 +275,26 @@
   </article></div>
   </section></main>
   <footer><strong>MemoraAI · por Surreal Design Studio</strong></footer>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      const image = card.querySelector('img');
+      const model = card.querySelector('h3')?.textContent.trim();
+      if (!image || !model) return;
+
+      const media = document.createElement('div');
+      media.className = 'card-media';
+      image.before(media);
+      media.appendChild(image);
+
+      const button = document.createElement('a');
+      button.className = 'card-whatsapp';
+      button.href = `https://wa.me/5511988623592?text=${encodeURIComponent(`Olá! Vi o modelo ${model} no catálogo MemoraAI e gostaria de mais informações.`)}`;
+      button.target = '_blank';
+      button.rel = 'noopener';
+      button.textContent = '💬 Pedir no WhatsApp';
+      button.setAttribute('aria-label', `Pedir o modelo ${model} pelo WhatsApp`);
+      media.appendChild(button);
+    });
+  </script>
 </body>
 </html>
