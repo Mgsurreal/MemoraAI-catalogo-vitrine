@@ -6,7 +6,20 @@
   <meta name="theme-color" content="#fffaf1">
   <title>MemoraAI · Catálogo de ideias</title>
   <meta name="description" content="Catálogo de modelos personalizados MemoraAI.">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{--ink:#12231d;--green:#176b4b;--lime:#d8ef6b;--paper:#fffaf1;--muted:#637069;--line:#e7e1d6}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+    .hero{padding:52px 20px 38px;background:radial-gradient(circle at 90% 0,#d8ef6b88,transparent 35%),linear-gradient(150deg,#fffdf8,#f1eadc);border-bottom:1px solid var(--line)}
+    .hero-inner{max-width:1120px;margin:auto}.brand{font-size:30px;letter-spacing:-1.5px;margin:0 0 34px}.brand b{color:var(--green)}
+    .eyebrow{display:inline-block;color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.5px;margin-bottom:12px}
+    h1{font-family:Georgia,serif;font-size:clamp(39px,8vw,72px);line-height:.98;letter-spacing:-2px;max-width:800px;margin:0 0 20px}
+    .hero p{max-width:680px;color:var(--muted);font-size:18px;line-height:1.6;margin:0}.count{margin-top:28px;font-weight:700;color:var(--green)}
+    main{max-width:1120px;margin:auto;padding:42px 16px 72px}section+section{margin-top:64px}.section-title{display:flex;gap:14px;align-items:flex-start;margin:0 4px 22px}.section-title>span{font-size:30px}.section-title h2{font-family:Georgia,serif;font-size:30px;margin:0 0 6px}.section-title p{color:var(--muted);margin:0;line-height:1.5}
+    .grid{display:grid;grid-template-columns:1fr;gap:20px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 35px #33270f0d}.card img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:#eee8dc}.copy{padding:19px 18px 21px}.copy small{color:var(--green);font-size:11px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}.copy h3{font-family:Georgia,serif;font-size:25px;line-height:1.08;margin:9px 0}.copy p{color:var(--muted);line-height:1.55;margin:0 0 15px}.copy span{display:inline-block;padding:7px 10px;border-radius:999px;background:#f0f5dd;color:#385240;font-size:12px;font-weight:700}
+    footer{padding:34px 20px 48px;text-align:center;border-top:1px solid var(--line);color:var(--muted);line-height:1.6}footer strong{display:block;color:var(--ink);font-size:20px;margin-bottom:8px}
+    @media(min-width:620px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:68px 34px 48px}main{padding-inline:28px}}
+    @media(min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card img{aspect-ratio:4/5}.copy{min-height:192px}}
+  </style>
 </head>
 <body>
   <header class="hero"><div class="hero-inner"><div class="brand">memora<b>AI</b></div><span class="eyebrow">CATÁLOGO DE IDEIAS</span><h1>O que pode ser imaginado pode ser criado.</h1><p>Escolha uma inspiração. Cada modelo pode receber suas fotos, seus nomes e os detalhes da sua história.</p><div class="count">37 modelos disponíveis</div></div></header>
