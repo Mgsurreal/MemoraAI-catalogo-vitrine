@@ -1,0 +1,16 @@
+IMAGEM DE COMPARTILHAMENTO DO CATÁLOGO
+
+Nome exato do arquivo:
+memoraai-catalogo-og.jpg
+
+Salve a imagem nesta mesma pasta (assets).
+
+Tamanho recomendado:
+1200 x 630 pixels
+
+Formato:
+JPG
+
+O arquivo não aparece visualmente na página. Ele será lido pelo Facebook,
+WhatsApp, Twitter/X e outros aplicativos quando o link do catálogo for
+compartilhado.
